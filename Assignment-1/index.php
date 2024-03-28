@@ -11,7 +11,7 @@
   <h2>Order Page</h1>
 
   <form action="index.php" method="post">
-    <label for="items">Select Items: </label>
+    <label for="items">Select Items </label>
     <select name="items" id="items">
       <option value="Pizza">Pizza $6</option>
       <option value="Burger">Burger $5</option>
