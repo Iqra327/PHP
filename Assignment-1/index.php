@@ -22,11 +22,22 @@
     <label for="quantity">Quantity: </label>
     <input type="number" id="quantity" name="quantity" min=1 required>
     <br><br>
-    <button>Total Bill</button>
+    <input type="submit" name="submit" value="Total Bill">
   </form>
 
   <?php
-  echo"hiii";
+  $allPrices = [
+    "Pizza" => 1500,
+    "Burger" => 1000,
+    "Pasta" => 800,
+    "Water" =>300
+  ];
+
+  if(isset($_POST['submit'])){
+   $items = $POST['items'];
+   $price = $POST['quantity'];
+   
+  }
   ?>
 
 
