@@ -22,7 +22,7 @@
     <label for="quantity">Quantity: </label>
     <input type="number" id="quantity" name="quantity" min=1 required>
     <br><br>
-    <input type="submit" name="submit" value="Total Bill">
+    <input type="submit" name="total" value="Total Bill">
   </form>
 
   <?php
@@ -33,11 +33,29 @@
     "Water" =>300
   ];
 
-  if(isset($_POST['submit'])){
-   $items = $POST['items'];
-   $price = $POST['quantity'];
-   
+
+  if(isset($_POST['total'])){
+    $item = $_POST['items'];
+    $quantity = $_POST['quantity'];
+
+    if(array_key_exists($item,$allPrices)){
+      $price = $allPrices[$item];
+
+      $totalBill = $price * $quantity;
+
+      echo "<br><br>";
+      echo"<strong>Your Bill :</strong><br>";
+      echo"Quantity: $quantity<br>";
+      echo"Item: $item<br>";
+      echo "Total : $totalBill RS<br><br>";
+      echo"Thank You!";
+    }
   }
+
+
+
+
+
   ?>
 
 
